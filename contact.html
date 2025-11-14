@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse - Контакты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <style>
+        .main.container { margin-top: 2em; padding-bottom: 5em; }
+        .ui.footer.segment { padding: 3em 0; margin-top: 3em; }
+        .menu-toggle { display: none !important; }
+        .menu-links { display: flex; }
+
+        @media (max-width: 768px) {
+            .ui.secondary.menu.stackable { flex-wrap: wrap; }
+            .menu-toggle { 
+                display: block !important; 
+                order: 3; 
+                margin-left: auto !important;
+                background-color: transparent !important;
+            }
+            .menu-links {
+                display: none; 
+                width: 100%; 
+                flex-direction: column; 
+                padding: 10px 0;
+            }
+            .menu-links.active {
+                display: flex; 
+            }
+            .menu-links a.item {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .ui.secondary.menu .right.menu {
+                width: 100%;
+                order: 4;
+                margin-top: 10px;
+                padding-bottom: 0 !important;
+            }
+            .ui.secondary.menu .right.menu .item {
+                width: 100%;
+            }
+            .contact-menu {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                margin-bottom: 1em !important;
+            }
+            .contact-menu .item {
+                flex-grow: 1;
+                text-align: center;
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ui inverted attached segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing **stackable** menu">
+                <a class="header item" href="index.html"><i class="bolt icon"></i> **SYNAPSE**</a>
+
+                <a class="ui item mobile-only menu-toggle"><i class="bars icon"></i></a>
+
+                <div class="menu-links">
+                    <a class="item" href="index.html">Главная</a>
+                    <a class="item" href="about.html">О Компании</a>
+                    <a class="item" href="team.html">Команда</a>
+                    <a class="item" href="products.html">Продукты</a>
+                    <a class="active item" href="contact.html">Контакты</a>
+                </div>
+
+                <div class="right menu"><div class="item"><div class="ui blue button">Начать Проект</div></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui main container">
+        <h1 class="ui center aligned header">
+            Свяжитесь с Нами
+            <div class="sub header">Мы готовы ответить на ваши вопросы.</div>
+        </h1>
+
+        <div class="ui **stackable** grid">
+            <div class="four wide column">
+                <div class="ui vertical tabular menu contact-menu">
+                    <a class="active item" data-tab="form-content">Отправить Сообщение</a>
+                    <a class="item" data-tab="info-content">Контактная Информация</a>
+                </div>
+            </div>
+            <div class="twelve wide stretched column">
+                
+                <div class="ui active tab segment" data-tab="form-content">
+                    <form class="ui form">
+                        <div class="two **stackable** fields">
+                            <div class="field"><label>Имя</label><input type="text" placeholder="Ваше имя"></div>
+                            <div class="field"><label>Email</label><input type="email" placeholder="Email"></div>
+                        </div>
+                        <div class="field"><label>Тема</label><input type="text" placeholder="Тема сообщения"></div>
+                        <div class="field"><label>Сообщение</label><textarea rows="5"></textarea></div>
+                        <button class="ui fluid large blue button" type="submit">Отправить Заявку</button>
+                    </form>
+                </div>
+                
+                <div class="ui tab segment" data-tab="info-content">
+                    <h3 class="ui header">Основные офисы</h3>
+                    <div class="ui big relaxed blue list">
+                        <div class="item"><i class="map marker icon"></i> Главный офис: ул. Карасай Батыра 69, Алматы 050000</div>
+                        <div class="item"><i class="mail icon"></i> Email: info@synapse.com</div>
+                        <div class="item"><i class="phone icon"></i> Телефон: +1 (555) 123-4567</div>
+                    </div>
+                    
+                    <div class="ui divider"></div>
+                    <h3 class="ui header">Мы на карте</h3>
+                   
+                    <div class="ui segment" style="padding: 0;"> 
+                         <img class="ui fluid image" src="images/oficc.png" alt="Карта с расположением офиса">
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <p>&copy; 2025 Synapse, Inc. Интеллект Будущего</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.contact-menu .item').tab();
+            $('.menu-toggle').click(function() {
+                $('.menu-links').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

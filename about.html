@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse - О Компании</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <style>
+        .main.container { margin-top: 2em; padding-bottom: 5em; }
+        .ui.footer.segment { padding: 3em 0; margin-top: 3em; }
+        .menu-toggle { display: none !important; }
+        .menu-links { display: flex; }
+
+        @media (max-width: 768px) {
+            .ui.secondary.menu.stackable { flex-wrap: wrap; }
+            .menu-toggle { 
+                display: block !important; 
+                order: 3; 
+                margin-left: auto !important;
+                background-color: transparent !important;
+            }
+            .menu-links {
+                display: none; 
+                width: 100%; 
+                flex-direction: column; 
+                padding: 10px 0;
+            }
+            .menu-links.active {
+                display: flex; 
+            }
+            .menu-links a.item {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .ui.secondary.menu .right.menu {
+                width: 100%;
+                order: 4;
+                margin-top: 10px;
+                padding-bottom: 0 !important;
+            }
+            .ui.secondary.menu .right.menu .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ui inverted attached segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing **stackable** menu">
+                <a class="header item" href="index.html"><i class="bolt icon"></i> **SYNAPSE**</a>
+
+                <a class="ui item mobile-only menu-toggle"><i class="bars icon"></i></a>
+
+                <div class="menu-links">
+                    <a class="item" href="index.html">Главная</a>
+                    <a class="active item" href="about.html">О Компании</a>
+                    <a class="item" href="team.html">Команда</a>
+                    <a class="item" href="products.html">Продукты</a>
+                    <a class="item" href="contact.html">Контакты</a>
+                </div>
+
+                <div class="right menu"><div class="item"><div class="ui blue button">Начать Проект</div></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui main container">
+        <h1 class="ui center aligned header">
+            О Компании Synapse
+            <div class="sub header">Наша миссия, видение и история.</div>
+        </h1>
+
+        <div class="ui segment">
+            <div class="ui placeholder fluid image">
+                <div class="ui icon header">
+                    <i class="building outline huge icon"></i>
+                    <div class="ui sub header">Global Reach: Офисы по всему миру</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui relaxed divided **stackable** items">
+            <div class="item">
+                <div class="content">
+                    <a class="header"><i class="rocket icon"></i> Наша Миссия</a>
+                    <div class="description">
+                        <p>Мы стремимся создать будущее, в котором принятие решений будет основано исключительно на данных, предоставляя бизнесу инструменты искусственного интеллекта для достижения беспрецедентной эффективности и роста.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="header"><i class="eye icon"></i> Наше Видение</a>
+                    <div class="description">
+                        <p>Стать мировым лидером и главным партнером для компаний, стремящихся к полной цифровой трансформации и внедрению предиктивных технологий.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="header"><i class="history icon"></i> Наша История</a>
+                    <div class="description">
+                        <p>Synapse была основана в 2018 году командой инженеров и ученых. За 7 лет мы выросли в мирового лидера в области AI-решений, работая с Fortune 500.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <p>&copy; 2025 Synapse, Inc. Интеллект Будущего</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-links').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

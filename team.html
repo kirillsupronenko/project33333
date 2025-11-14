@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse - Команда</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <style>
+        .main.container { margin-top: 2em; padding-bottom: 5em; }
+        .ui.footer.segment { padding: 3em 0; margin-top: 3em; }
+        .ui.items .item {
+            align-items: center; 
+            padding: 1.5em 0 !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .ui.items .item:last-child {
+            border-bottom: none !important;
+        }
+        .ui.items .item .ui.image.circular { 
+            width: 150px !important; 
+            height: 150px !important; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            flex-shrink: 0; 
+            margin-right: 1.5em; 
+        }
+        .menu-toggle { display: none !important; }
+        .menu-links { display: flex; }
+
+        @media (max-width: 768px) {
+            .ui.secondary.menu.stackable { flex-wrap: wrap; }
+            .menu-toggle { 
+                display: block !important; 
+                order: 3; 
+                margin-left: auto !important;
+                background-color: transparent !important;
+            }
+            .menu-links {
+                display: none; 
+                width: 100%; 
+                flex-direction: column; 
+                padding: 10px 0;
+            }
+            .menu-links.active {
+                display: flex; 
+            }
+            .menu-links a.item {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .ui.secondary.menu .right.menu {
+                width: 100%;
+                order: 4;
+                margin-top: 10px;
+                padding-bottom: 0 !important;
+            }
+            .ui.secondary.menu .right.menu .item {
+                width: 100%;
+            }
+            
+
+            .ui.items .item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .ui.items .item .ui.image.circular { 
+                margin: 1em auto; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ui inverted attached segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing **stackable** menu">
+                <a class="header item" href="index.html"><i class="bolt icon"></i> **SYNAPSE**</a>
+
+                <a class="ui item mobile-only menu-toggle"><i class="bars icon"></i></a>
+                
+                <div class="menu-links">
+                    <a class="item" href="index.html">Главная</a>
+                    <a class="item" href="about.html">О Компании</a>
+                    <a class="active item" href="team.html">Команда</a> 
+                    <a class="item" href="products.html">Продукты</a>
+                    <a class="item" href="contact.html">Контакты</a>
+                </div>
+
+                <div class="right menu"><div class="item"><div class="ui blue button">Начать Проект</div></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui main container">
+        <h1 class="ui center aligned header">
+            Наша Команда
+            <div class="sub header">Эксперты, стоящие за успехом Synapse.</div>
+        </h1>
+
+        <div class="ui divided items">
+            <div class="item">
+                <img class="ui image circular" src="images/ivan.jpg" alt="Иван Петров">
+                <div class="content">
+                    <a class="header">Иван Петров</a>
+                    <div class="meta"><span>CEO & Главный Архитектор AI</span></div>
+                    <div class="description">Иван руководит разработкой ключевых алгоритмов и определяет стратегическое направление развития продукта.</div>
+                    <div class="extra"><a class="ui basic blue button">Связаться</a></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="ui image circular" src="images/elena.jpg" alt="Елена Смирнова">
+                <div class="content">
+                    <a class="header">Елена Смирнова</a>
+                    <div class="meta"><span>CTO & Руководитель R&D</span></div>
+                    <div class="description">Елена отвечает за техническую инфраструктуру и исследования в области нейронных сетей следующего поколения.</div>
+                    <div class="extra"><a class="ui basic blue button">Связаться</a></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="ui image circular" src="images/anna.jpeg" alt="Анна Волкова">
+                <div class="content">
+                    <a class="header">Анна Волкова</a>
+                    <div class="meta"><span>Глава Отдела Маркетинга</span></div>
+                    <div class="description">Анна обеспечивает стратегическое позиционирование Synapse на мировом рынке, успешно выводя новые продукты.</div>
+                    <div class="extra"><a class="ui basic blue button">Связаться</a></div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="ui center aligned dividing header">Ключевые Результаты</h2>
+        <div class="ui center aligned segment">
+            <div class="ui three column **stackable** centered grid">
+                <div class="column"><div class="ui huge statistic"><div class="value blue">10M+</div><div class="label">Сэкономлено клиентами</div></div></div>
+                <div class="column"><div class="ui huge statistic"><div class="value green">99.9%</div><div class="label">Доступность сервиса</div></div></div>
+                <div class="column"><div class="ui huge statistic"><div class="value purple">25+</div><div class="label">Мировых наград</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <p>&copy; 2025 Synapse, Inc. Интеллект Будущего</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-links').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
